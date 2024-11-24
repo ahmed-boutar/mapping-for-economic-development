@@ -11,3 +11,11 @@ h3==3.7.7
 folium==0.17.0
 geojson==3.1.0
 branca==0.7.2
+rasterio==1.4.0
+streamlit==1.39.0
+streamlit-folium
+dash
+diskcache==5.6.3
+geopy
+camelot-py
+opencv-python
