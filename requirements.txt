@@ -19,3 +19,5 @@ diskcache==5.6.3
 geopy
 camelot-py
 opencv-python
+datasets
+huggingface_hub
