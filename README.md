@@ -7,7 +7,7 @@ various geographical and demographic data to enable businesses, researchers, and
 This project curates and open sources a novel dataset designed to foster economic development in Africa, starting with Kenya. By combining geospatial and demographic data, this dataset's goal is to enable businesses, researchers, and policymakers to make data-driven decisions, conduct meaningful analyses, and gain detailed insights into specific geographical areas (all relevant data in one place).
 
 ## Folder Structure
-
+```
 mapping-for-economic-development/
 ├── LICENSE.txt
 ├── README.md
@@ -22,6 +22,7 @@ mapping-for-economic-development/
 data/ # data to be downloaded from the open-source dataset
 ├── raw
 ├── processed
+```
 
 
 ### Scripts contents 
@@ -81,7 +82,8 @@ The data collected comes from different sources, serve different purposes, and h
 |----------|----------|----------|----------|----------|
 | Row 1-1  | Row 1-2  | Row 1-3  | Row 1-4  |  Row 1-4 |
 | Row 2-1  | Row 2-2  | Row 2-3  | Row 2-4  |  Row 1-4 |
-| Row 3-1  | Row 3-2  | https://data.humdata.org/dataset/hotosm_ken_financial_services | Row 3-4  |  Row 1-4 |
+| Kenya financial services  | gpkg (Point as geometry)  | https://data.humdata.org/dataset/hotosm_ken_financial_services | This dataset was made available through the efforts of Humanitarian OpenStreetMap Team and was made available on the Humanitarian Data Exchange. | This dataset contains the location of the different financial services in Kenya. Not only does it include the location and name of each financial service, but it also includes the type (bank, ATM, post_office...)|
+| MPI and Partial Indices Subnational Database | .xlsx (Tabular) | https://data.humdata.org/dataset/global-mpi/resource/45b18fbb-ab0d-4f54-ae23-c078f1eccf25 | This dataset was made available through the efforts of Humanitarian OpenStreetMap Team and was made available on the Humanitarian Data Exchange. | The index provides the only comprehensive measure available for non-income poverty, which has become a critical underpinning of the SDGs. Critically the MPI comprises variables that are already reported under the Demographic Health Surveys (DHS) and Multi-Indicator Cluster Surveys (MICS) The resources subnational multidimensional poverty data from the data tables published by the Oxford Poverty and Human Development Initiative (OPHI), University of Oxford. The global Multidimensional Poverty Index (MPI) measures multidimensional poverty in over 100 developing countries, using internationally comparable datasets and is updated annually. The measure captures the severe deprivations that each person faces at the same time using information from 10 indicators, which are grouped into three equally weighted dimensions: health, education, and living standards. The global MPI methodology is detailed in Alkire, Kanagaratnam & Suppa (2023)|
 
 ### How much data will be needed (Power Analysis)
 Uber H3 Hexagons have different resolutions, each covering a different surface area. In my
@@ -109,7 +111,6 @@ relevant datasets from trusted sources) (e.g. world soil database)
 ## Exploratory Data Analysis
 
 
-
 ## Ethics Statement
 
 The dataset adheres to strict ethical guidelines, ensuring that no personal identifiable information (PII) is included. All data sources have been evaluated for ethical sourcing practices, and the dataset aims to mitigate potential biases by including diverse metrics. Efforts have been made to ensure transparency and inclusivity, preventing misuse or discriminatory applications.
@@ -120,9 +121,6 @@ The dataset adheres to strict ethical guidelines, ensuring that no personal iden
 
 ### License
 This dataset is licensed under the Creative Commons Attribution 4.0 International License (CC-BY 4.0). 
----
-license: cc-by-4.0
----
 
 To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
 
