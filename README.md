@@ -233,6 +233,31 @@ The EDA performed on the different datasets aimed at understanding the data, ens
 5. Number of sub-counties with severe poverty > 10% 
 ![Number of sub-counties with severe poverty > 10% ](./eda_png/sub-counties-with-severe-poverty.png)
 
+**How To Run the EDA**
+***If installing the requirements does not work, make sure you are using python3.9 or python3.11***
+#### 1. Clone this repository and navigate to the cloned folder
+#### 2. Download the open sourced dataset and ensure that your folder structure follows the one included in the folder structure section of this README
+#### 3. Set-up and activate the virtual environment:
+Mac OS/Linux:
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+Windows:
+```
+python -m venv venv
+venv\Scripts\activate
+```
+#### 4. Install the required dependencies
+```
+pip install -r requirements.txt
+```
+#### 5. Navigate to the `src/` directory and run this command
+```
+python eda.py
+```
+#### 6. The results will be either displayed as plots and printed on the console
+
 ## Ethics Statement
 
 This dataset adheres to strict ethical principles to ensure its responsible use and contribution to research and development. Key ethical considerations include:
