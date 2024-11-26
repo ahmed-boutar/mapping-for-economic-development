@@ -210,6 +210,26 @@ The data collection is based on the following protocol:
 
 ## Exploratory Data Analysis
 
+The EDA performed on the different datasets aimed at understanding the data, ensuring that null values are not included for the relevant features. The goal was to understand what the data represents and figuring out the different ways to merge it (when it comes to augmenting H3 Hexagons with data). Here are the main findings: 
+- Population density is a complete dataset with no missing values. The population numbers are integers (non decimal numbers) representing whole numbers, and contains 231360 unique hexagons at 400m resolution (resolution 8 in H3 library). 
+
+- The aggregated age demographics dataset (which has no missing values as well) and population density dataset contain different number of h3 hexagons (50k rows that are different). The hypotheses that explain the discrepancies I tested included: both datasets are using different map projections (different CRS), some hexagons could be overlapping, one dataset just has more data than the other. After reprojecting the population density data to match the CRS of the age demographics, the result was similar. After mapping both datasets, I found out that the population density did not cover all of the surface area of Kenya (probably due to estimating that those areas are unpopulated), while the age demographics did. This finding guided my merging strategy, discussed in the Data Description section. 
+
+**Results EDA on the full H3 dataset**
+1. Population Distribution 
+![Population Distribution](./eda_png/pop_dist_analysis.png)
+
+2. Population Distribution Percentage By County 
+![Population Distribution Percentage By County](./eda_png/population_dist_county.png)
+
+3. Population Distribution By Sex By County 
+![Population Distribution By Sex By County](./eda_png/sex_dist_county.png)
+
+4. Population Distribution by sub-county in the Nairobi county
+![Population Distribution by sub-county in the Nairobi county](./eda_png/population_dist_nairobi_sub_counties.png)
+
+5. Number of sub-counties with severe poverty > 10% 
+![Number of sub-counties with severe poverty > 10% ](./eda_png/sub-counties-with-severe-poverty.png)
 
 ## Ethics Statement
 
