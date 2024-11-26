@@ -215,6 +215,8 @@ The EDA performed on the different datasets aimed at understanding the data, ens
 
 - The aggregated age demographics dataset (which has no missing values as well) and population density dataset contain different number of h3 hexagons (50k rows that are different). The hypotheses that explain the discrepancies I tested included: both datasets are using different map projections (different CRS), some hexagons could be overlapping, one dataset just has more data than the other. After reprojecting the population density data to match the CRS of the age demographics, the result was similar. After mapping both datasets, I found out that the population density did not cover all of the surface area of Kenya (probably due to estimating that those areas are unpopulated), while the age demographics did. This finding guided my merging strategy, discussed in the Data Description section. 
 
+- The points of interest dataset contains observations for different kinds of amenities. When getting the unique values for amenities, a pattern emerges where we can see that some amenities belong to specific sections. For example, amenities corresponding to hospitals, pharmacies, and clinics represent health facilities. Based on this logic, we can extract data and organize it based on this logic. Some different values correspond to the same exact amenity. The discrepancy comes probably from input errors. For example, some observations have 'pharmacy' as the value for amenity while others have 'pharmaccy'. A function that standardizes these names is imperative. 
+
 **Results EDA on the full H3 dataset**
 1. Population Distribution 
 ![Population Distribution](./eda_png/pop_dist_analysis.png)
@@ -233,7 +235,13 @@ The EDA performed on the different datasets aimed at understanding the data, ens
 
 ## Ethics Statement
 
-The dataset adheres to strict ethical guidelines, ensuring that no personal identifiable information (PII) is included. All data sources have been evaluated for ethical sourcing practices, and the dataset aims to mitigate potential biases by including diverse metrics. Efforts have been made to ensure transparency and inclusivity, preventing misuse or discriminatory applications.
+This dataset adheres to strict ethical principles to ensure its responsible use and contribution to research and development. Key ethical considerations include:
+
+- Privacy: The dataset contains no personally identifiable information (PII) and solely includes aggregated data to protect individual privacy.
+- Transparency: All data sources are openly documented, and the dataset integrates publicly available information under permissible licenses such as Creative Commons Attribution 4.0 (CC-BY 4.0).
+- Mitigation of Bias: To reduce potential biases, diverse data points—ranging from demographics to socioeconomic indicators—were included. However, limitations in data availability and accuracy from source datasets are acknowledged.
+- Inclusivity: The dataset aims to promote equitable access by being fully open-source, supporting researchers, businesses, and policymakers in addressing economic disparities and fostering development.
+- Preventing Misuse: The dataset was designed with an awareness of potential misuse, such as discriminatory decision-making. To counteract this, care was taken to ensure that the data sourced is unbiased and as representative of various regions within Kenya as possible.
 
 ## How To Access The Dataset
 [Link To The Dataset](https://huggingface.co/datasets/ahmedboutar/kenya-mapping-for-economic-development)
